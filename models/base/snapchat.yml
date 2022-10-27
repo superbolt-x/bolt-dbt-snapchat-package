@@ -1,0 +1,48 @@
+
+version: 2
+
+sources:
+  - name: snapchat_raw
+    schema: snapchat_raw
+    tables:
+      - name: ad_daily_report
+      - name: ads
+        identifier: ad_history
+      - name: ad_squads
+        identifier: ad_squad_history
+      - name: campaigns 
+        identifier: campaign_history
+      - name: accounts
+        identifier: ad_account_history
+
+models:
+  - name: snapchat_accounts 
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
+  - name: snapchat_campaigns
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
+  - name: snapchat_ad_squads
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
+  - name: snapchat_ads
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
+  - name: _stg_snapchat_ads_insights
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
