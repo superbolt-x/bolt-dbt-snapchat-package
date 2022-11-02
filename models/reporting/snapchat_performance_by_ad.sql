@@ -36,7 +36,7 @@ WITH
     ),
 
     ad_squads AS 
-    (SELECT ad_squad_id, campaign_id, ad_squad_name, ad_squad_status
+    (SELECT ad_squad_id, campaign_id, ad_squad_name, ad_squad_status, ad_squad_daily_budget
     FROM {{ ref('snapchat_ad_squads') }}
     ),
 
